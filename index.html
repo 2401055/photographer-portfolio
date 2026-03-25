@@ -24,67 +24,81 @@
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
-        <div class="portfolio-container">
-            <!-- Portfolio Header -->
-            <div class="portfolio-header">
-                <h2 class="portfolio-title">My Portfolio</h2>
-                <p class="portfolio-subtitle">Capturing Moments, Creating Memories</p>
+        <div class="portfolio-wrapper">
+            <!-- Featured Article Header -->
+            <div class="featured-header">
+                <div class="featured-image" style="background-image: url('https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&h=400&fit=crop');"></div>
+                <div class="featured-overlay"></div>
+                <div class="featured-title-wrapper">
+                    <h2 class="featured-title">4 Photography Tips You Should Know</h2>
+                </div>
             </div>
 
-            <!-- Portfolio Items -->
-            <div class="portfolio-items">
-                <!-- Item 1 -->
-                <article class="portfolio-item">
-                    <div class="portfolio-item-header">
-                        <img src="https://via.placeholder.com/80" alt="Jane Doe" class="author-avatar">
-                        <div class="author-info">
-                            <h3 class="author-name">Jane Doe</h3>
-                            <p class="update-date">Last updated Jan 27, 2024</p>
-                        </div>
+            <!-- Author Info -->
+            <div class="author-section">
+                <img src="https://i.pravatar.cc/100?img=1" alt="Jane Doe" class="author-avatar">
+                <div class="author-details">
+                    <h3 class="author-name">Jane Doe</h3>
+                    <p class="author-date">Last updated Jan 27, 2024</p>
+                </div>
+            </div>
+
+            <!-- Portfolio Articles -->
+            <div class="articles-container">
+                <!-- Article 1 -->
+                <article class="portfolio-article">
+                    <div class="article-number">1.</div>
+                    <div class="article-content">
+                        <h3 class="article-title">Master the Rule of Thirds</h3>
+                        <p class="article-location">Photography Composition Basics</p>
+                        <p class="article-text">
+                            The rule of thirds is one of the most fundamental principles in photography composition. By dividing your frame into nine equal parts using two equally-spaced horizontal lines and two equally-spaced vertical lines, you create a grid that helps you compose more engaging photographs. When you place your subject along these lines or at their intersections, you create more tension, energy and interest in the composition than simply centering the subject. This simple technique can dramatically improve your photography by creating more dynamic and visually appealing images.
+                        </p>
+                        <p class="article-tip"><strong>Pro Tip:</strong> Most modern cameras and smartphones have a grid overlay option in the settings. Enable it to practice the rule of thirds while shooting.</p>
+                        <img src="https://images.unsplash.com/photo-1606986628025-35d57e735ae0?w=600&h=400&fit=crop" alt="Rule of Thirds" class="article-image">
                     </div>
-                    <h4 class="item-title">Mountain Landscape Photography</h4>
-                    <p class="item-location">Colorado, USA</p>
-                    <p class="item-description">
-                        Capturing the majestic beauty of mountain landscapes requires patience, skill, and an eye for detail. In this collection, I showcase the stunning vistas and natural wonders of the Rocky Mountains. From sunrise to sunset, these images tell stories of nature's grandeur and the interplay of light and shadow.
-                    </p>
-                    <p class="item-recommendation"><strong>Photography Style:</strong> Landscape & Nature</p>
-                    <img src="https://via.placeholder.com/500x300" alt="Mountain Landscape" class="item-image">
                 </article>
 
-                <!-- Item 2 -->
-                <article class="portfolio-item">
-                    <div class="portfolio-item-header">
-                        <img src="https://via.placeholder.com/80" alt="Jane Doe" class="author-avatar">
-                        <div class="author-info">
-                            <h3 class="author-name">Jane Doe</h3>
-                            <p class="update-date">Last updated Jan 20, 2024</p>
-                        </div>
+                <!-- Article 2 -->
+                <article class="portfolio-article">
+                    <div class="article-number">2.</div>
+                    <div class="article-content">
+                        <h3 class="article-title">Understanding Light and Shadow</h3>
+                        <p class="article-location">Lighting Fundamentals</p>
+                        <p class="article-text">
+                            Light is the essence of photography. Understanding how light interacts with your subject is crucial for creating compelling images. Whether you're working with natural light, artificial light, or a combination of both, learning to see and manipulate light will transform your photography. Golden hour light, harsh midday sun, soft window light – each creates different moods and effects. The interplay between light and shadow creates depth, dimension, and emotion in your photographs. Experiment with different light sources and observe how they affect your subject.
+                        </p>
+                        <p class="article-tip"><strong>Pro Tip:</strong> Golden hour (shortly after sunrise or before sunset) provides warm, soft, directional light that is ideal for most types of photography.</p>
+                        <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=600&h=400&fit=crop" alt="Light and Shadow" class="article-image">
                     </div>
-                    <h4 class="item-title">Urban Street Photography</h4>
-                    <p class="item-location">New York, USA</p>
-                    <p class="item-description">
-                        The streets of New York tell countless stories through the lens of a photographer. This collection captures the vibrant energy, diverse cultures, and candid moments that define urban life. From bustling markets to quiet alleyways, each image reveals the hidden beauty of city streets.
-                    </p>
-                    <p class="item-recommendation"><strong>Photography Style:</strong> Street & Urban</p>
-                    <img src="https://via.placeholder.com/500x300" alt="Urban Street" class="item-image">
                 </article>
 
-                <!-- Item 3 -->
-                <article class="portfolio-item">
-                    <div class="portfolio-item-header">
-                        <img src="https://via.placeholder.com/80" alt="Jane Doe" class="author-avatar">
-                        <div class="author-info">
-                            <h3 class="author-name">Jane Doe</h3>
-                            <p class="update-date">Last updated Jan 15, 2024</p>
-                        </div>
+                <!-- Article 3 -->
+                <article class="portfolio-article">
+                    <div class="article-number">3.</div>
+                    <div class="article-content">
+                        <h3 class="article-title">Focus and Depth of Field</h3>
+                        <p class="article-location">Technical Photography Skills</p>
+                        <p class="article-text">
+                            Depth of field (DOF) is the area of your photograph that appears sharp and in focus. By controlling your aperture, focal length, and distance from your subject, you can create images with shallow depth of field (where only your subject is in focus) or deep depth of field (where most of the scene is in focus). Understanding and mastering depth of field gives you creative control over where your viewer's eye is drawn in your image. A shallow depth of field is perfect for portraits and isolating subjects, while a deep depth of field is ideal for landscapes where you want everything sharp.
+                        </p>
+                        <p class="article-tip"><strong>Pro Tip:</strong> Use a lower f-number (f/1.8, f/2.8) for shallow depth of field and a higher f-number (f/8, f/16) for greater depth of field.</p>
+                        <img src="https://images.unsplash.com/photo-1511379938547-c1f69b13d835?w=600&h=400&fit=crop" alt="Depth of Field" class="article-image">
                     </div>
-                    <h4 class="item-title">Portrait & People Photography</h4>
-                    <p class="item-location">Studio Sessions</p>
-                    <p class="item-description">
-                        Portraits are about capturing the essence of a person - their personality, emotions, and unique character. Through careful lighting, composition, and direction, I create images that tell personal stories. Each portrait is a collaboration between photographer and subject, resulting in authentic and meaningful images.
-                    </p>
-                    <p class="item-recommendation"><strong>Photography Style:</strong> Portrait & People</p>
-                    <img src="https://via.placeholder.com/500x300" alt="Portrait" class="item-image">
+                </article>
+
+                <!-- Article 4 -->
+                <article class="portfolio-article">
+                    <div class="article-number">4.</div>
+                    <div class="article-content">
+                        <h3 class="article-title">Post-Processing and Editing</h3>
+                        <p class="article-location">Digital Photography Workflow</p>
+                        <p class="article-text">
+                            Post-processing is an essential part of modern photography. While it's important to get the best shot possible in-camera, careful editing can enhance your images and bring out the photographer's creative vision. Tools like Adobe Lightroom and Photoshop allow you to adjust exposure, contrast, color, and tone. However, remember that editing should enhance your image, not completely transform it. Develop a consistent editing style that reflects your aesthetic and helps your work stand out. Learn the fundamentals of color theory and tonal range to create images that are both technically sound and artistically compelling.
+                        </p>
+                        <p class="article-tip"><strong>Pro Tip:</strong> Start with basic adjustments (exposure, contrast, highlights, shadows) before moving to more advanced techniques.</p>
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f70504504?w=600&h=400&fit=crop" alt="Post-Processing" class="article-image">
+                    </div>
                 </article>
             </div>
         </div>
