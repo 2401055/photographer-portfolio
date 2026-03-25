@@ -4,16 +4,12 @@ document.querySelectorAll('.nav-link').forEach(link => {
         e.preventDefault();
         
         const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
         
-        // Scroll to hero section for home link
-        if (targetId === '#home') {
-            window.scrollTo({
-                top: 0,
+        if (targetElement) {
+            targetElement.scrollIntoView({
                 behavior: 'smooth'
             });
-        } else {
-            // For other links, you can add more sections later
-            console.log('Navigating to:', targetId);
         }
     });
 });
@@ -21,23 +17,34 @@ document.querySelectorAll('.nav-link').forEach(link => {
 // Add active state to navigation links based on scroll position
 window.addEventListener('scroll', function() {
     const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section[id]');
+    
+    let currentSection = '';
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        if (window.scrollY >= sectionTop - 100) {
+            currentSection = section.getAttribute('id');
+        }
+    });
     
     navLinks.forEach(link => {
         link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + currentSection) {
+            link.classList.add('active');
+        }
     });
-    
-    // Add active class to home link when at top
-    if (window.scrollY < 100) {
-        navLinks[0].classList.add('active');
-    }
 });
 
 // Parallax effect for hero background
 window.addEventListener('scroll', function() {
     const heroBackground = document.querySelector('.hero-background');
     const scrollPosition = window.scrollY;
+    const heroHeight = document.querySelector('.hero').clientHeight;
     
-    if (scrollPosition < window.innerHeight) {
+    if (scrollPosition < heroHeight) {
         heroBackground.style.transform = `translateY(${scrollPosition * 0.5}px)`;
     }
 });
@@ -45,5 +52,27 @@ window.addEventListener('scroll', function() {
 // Add fade-in animation to hero content on page load
 window.addEventListener('load', function() {
     const heroContent = document.querySelector('.hero-content');
-    heroContent.style.animation = 'fadeIn 1s ease-out';
+    if (heroContent) {
+        heroContent.style.animation = 'fadeIn 1s ease-out';
+    }
+});
+
+// Add scroll animation to portfolio items
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+};
+
+const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.animation = 'fadeIn 0.6s ease-out forwards';
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.portfolio-item').forEach(item => {
+    item.style.opacity = '0';
+    observer.observe(item);
 });
